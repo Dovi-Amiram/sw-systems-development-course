@@ -5,8 +5,11 @@ int main(){
 	double x;
 	printf("Please enter a real number (x): ");
 	scanf("%lf", &x);
-
-	int floor_x = (int) x;
+ 
+	int floor_x;
+	if (x >= 0)
+		floor_x = (int) x;
+	else floor_x = (int) (x - 1);
 
 	double res1, res2 , res3;
 	res1 = (sub(add(Exponent(floor_x), Power(x, 3)), 2));
